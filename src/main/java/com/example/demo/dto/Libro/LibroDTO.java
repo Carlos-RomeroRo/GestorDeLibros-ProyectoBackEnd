@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LibroDTO{
-    private Long id; 
+public class LibroDTO {
+    private Long id_libro;
     private String titulo;
     private String autor;
-    private int anoPublicacion; 
-    private int cantidadDisponible;
-} 
+    private int ano_publicacion;
+    private int cantidad_disponible;
+}
+// es correcto

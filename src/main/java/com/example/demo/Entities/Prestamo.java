@@ -1,6 +1,7 @@
 package com.example.demo.Entities;
 
-import java.security.Timestamp;
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,26 +14,30 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table (name = "prestamo")
+@Table(name = "Prestamo")
 public class Prestamo {
-
-    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @ManyToOne
-    @JoinColumn(name = "idLibro",referencedColumnName = "id")
-    private Libro idLibro;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id_prestamo;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario",referencedColumnName = "id")
-    private Usuario idUsuario;
+    @JoinColumn(name = "libro_id", referencedColumnName = "id_libro")
+    private Libro libro_id;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", referencedColumnName = "id_usuario")
+    private Usuario usuario_id;
 
     @Column(nullable = false)
-    private Timestamp fechaPrestamo;
-    
+    private Date fecha_Prestamo;
+
+    @Column(nullable = false)
+    private Date fecha_Devolucion;
+
 }
+
+// es correcta

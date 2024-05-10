@@ -5,20 +5,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.Min;
+import jakarta.persistence.Table;
+//import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-// @Table(name = "libro")
+@Table(name = "Libro")
+@Entity
 public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_libro;
 
     @Column(nullable = false)
     private String titulo;
@@ -27,9 +28,10 @@ public class Libro {
     private String autor;
 
     @Column(nullable = false)
-    private int anoPublicacion;
+    private int ano_publicacion;
 
     @Column(nullable = false)
-    @Min(value = 0, message = "La cantidad de libros disponbles no puede ser menor a cero")
-    private int cantidadDisponible;
+    private int cantidad_disponible;
 }
+
+// es correcta

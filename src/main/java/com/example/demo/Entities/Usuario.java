@@ -10,15 +10,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "usuario")
+@Table(name = "Usuario")
 public class Usuario {
-    @Id @GeneratedValue (strategy=GenerationType.IDENTITY)
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_usuario;
 
     @Column(nullable = false)
     private String nombre;
@@ -26,6 +26,7 @@ public class Usuario {
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false)
-    private Long numeroTelefono;
+    private Long numero_telefono;
 }
+
+// es correcta
