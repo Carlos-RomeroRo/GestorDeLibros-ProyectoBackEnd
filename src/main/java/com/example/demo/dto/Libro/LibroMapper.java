@@ -13,4 +13,3 @@ public interface LibroMapper {
     public Libro libroDTOToLibro(LibroDTO libroDTO);
 }
 
-// es correcto

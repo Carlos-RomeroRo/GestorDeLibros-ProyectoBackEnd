@@ -48,5 +48,3 @@ public interface PrestamoMapper {
         return prestamoRes;
     }
 }
-
-// es correcto

@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 public class UsuarioDTO {
     private Long id_usuario;
     private String nombre;
+    private String apellido;
+    private String contrasena;
     private String email;
     private Long numero_telefono;
 }
-// es correcto

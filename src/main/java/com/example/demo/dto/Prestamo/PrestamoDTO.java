@@ -17,4 +17,3 @@ public class PrestamoDTO {
     private Date fecha_devolucion;
 }
 
-// es correcto

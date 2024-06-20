@@ -12,6 +12,6 @@ public class LibroDTO {
     private String titulo;
     private String autor;
     private int ano_publicacion;
+    private String descripcion;
     private int cantidad_disponible;
 }
-// es correcto

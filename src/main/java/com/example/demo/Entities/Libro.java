@@ -30,8 +30,11 @@ public class Libro {
     @Column(nullable = false)
     private int ano_publicacion;
 
+    @Column(nullable=false)
+    private String descripcion;
+
     @Column(nullable = false)
     private int cantidad_disponible;
 }
 
-// es correcta
+

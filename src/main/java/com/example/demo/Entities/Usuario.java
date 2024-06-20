@@ -24,9 +24,14 @@ public class Usuario {
     private String nombre;
 
     @Column(nullable = false)
+    private String apellido;
+
+    @Column(nullable = false)
+    private String contrasena;
+
+    @Column(nullable = false)
     private String email;
 
     private Long numero_telefono;
 }
 
-// es correcta
